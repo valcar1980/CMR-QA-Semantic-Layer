@@ -12,9 +12,21 @@ efficiently query image databases based on quality information extracted from th
 annotations. Our approach has the potential to be extended to broader projects and ultimately employed in the clinical setting.
 
 ## Source dependencies
-- [Python 3](https://www.python.org/)
-- [Owlready2](https://pypi.org/project/Owlready2/): pip install Owlready2
-- [RDFLib](https://rdflib.readthedocs.io/en/stable/gettingstarted.html): pip install rdflib
+
+The instructions below work for python 3.10 on Linux machine Ubuntu 22.04.4 LTS
+
+### Create virtual environment within main directory
+* Ensure you are in the main directory of the project
+``` pwd``` should give you ``` <my folder for the git repo>/cmr-qa-semantic-layer/src```
+* Create a virtual environment using venv
+```python -m venv .venv```
+* Activate the virtual environemnt BEFORE installing any package/library
+```source .venv/bin/activate```
+* Install using pip
+```pip install pandas```
+
+* [Owlready2](https://pypi.org/project/Owlready2/): ```pip install Owlready2```
+* [RDFLib](https://rdflib.readthedocs.io/en/stable/gettingstarted.html): ```pip install rdflib```
 
 ## CMR-QA Ontology
 - Current version ([v0.4.6](https://github.com/ernestojimenezruiz/CMR-QA-Semantic-Layer/blob/master/ontology/CMR-QA.owl), November, 2018): [OWL format](https://raw.githubusercontent.com/ernestojimenezruiz/CMR-QA-Semantic-Layer/master/ontology/CMR-QA.owl) 

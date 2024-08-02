@@ -2,11 +2,16 @@
 Created on 19 Nov 2018
 
 @author: ejimenez-ruiz
+Edited by valcar1980
 '''
-from csv_utils.csv_reader import CSVQAReader
+
+import sys
+sys.path.append('../csv_utils/')
+sys.path.append('../constants/')
+import csv_reader as csvread
 from rdflib import Graph, URIRef, BNode, Literal
 from rdflib.namespace import RDF, RDFS, OWL
-from constants import CMR_QA
+import CMR_QA
 import re
 
 class TripleGenerator(object):
@@ -17,8 +22,7 @@ class TripleGenerator(object):
 
     def __init__(self, csv_file_name, output_file):
         
-        
-        self.qa_reader = CSVQAReader(csv_file_name, False)    
+        self.qa_reader = csvread.CSVQAReader(csv_file_name, False)    
         csvreader=self.qa_reader.getCSVReader()
 
         #Ignore first row
