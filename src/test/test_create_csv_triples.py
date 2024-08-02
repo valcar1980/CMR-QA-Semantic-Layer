@@ -14,7 +14,7 @@ import sys
 sys.path.append('../semantics/')
 import triple_generator as triplegen
 
-file_csv = '../../data/input/FirstBatch100_scores.csv'
+file_csv = '../../data/input/FirstBatch100.csv'
 
 #From excel to CSV (not necessary any more)
 #data_xls = pd.read_excel('/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/FirstBatch100.xlsx', 'Sheet1', index_col=None)
