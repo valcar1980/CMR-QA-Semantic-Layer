@@ -19,3 +19,20 @@ LIMIT 10
 ```
 
 ## Give me the participant name for all the scan visits where LV score >1
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>SELECT ?patientID ?scanvisit ?LVqualityscore
+# SELECT ?scanvisit ?LVqualityscore
+WHERE {
+  # ?scanvisit rdf:type cmrqa:Imaging_Scan_Visit.
+  ?scanvisit rdf:type cmrqa:Medical_Imaging_Study.
+  ?scanvisit cmrqa:hasQualityData ?qualitydata.
+  ?scanvisit cmrqa:participantName ?patientID.
+  ?qualitydata cmrqa:hasLVQualityScore ?LVqualityscore
+  FILTER(?LVqualityscore >1)
+ 
+  
+
+  # cmrqa:hasLVQualityScore > 1
+}
+LIMIT 10
